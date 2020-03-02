@@ -14,4 +14,15 @@ public class ConsumerController {
     public IMCountyList helloConsumer() {
         return helloService.hello();
     }
+
+    @RequestMapping(value = "/feign-consumer2", method = RequestMethod.GET)
+    public String helloConsumer2() {
+        StringBuffer sb = new StringBuffer();
+        sb.append(helloService.hello("Grace")).append("\n");
+        sb.append(helloService.hello("Amber", 8)).append("\n");
+
+        //helloService.hello(new User("Kevin", 45));
+        sb.append(helloService.hello(new User("Kevin", 45))).append("\n");
+        return sb.toString();
+    }
 }
