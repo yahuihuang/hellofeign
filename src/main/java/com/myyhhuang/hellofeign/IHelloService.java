@@ -3,7 +3,7 @@ package com.myyhhuang.hellofeign;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient("hello-service")
+@FeignClient(value = "hello-service", configuration = DisableHystrixConfiguration.class)
 public interface IHelloService {
     @RequestMapping("/hello")
     IMCountyList hello();
