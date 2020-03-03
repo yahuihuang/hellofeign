@@ -25,4 +25,19 @@ public class ConsumerController {
         sb.append(helloService.hello(new User("Kevin", 45))).append("\n");
         return sb.toString();
     }
+
+    /*
+    //繼承
+    @Autowired
+    RefactorHelloService refactorHelloService;
+
+    @RequestMapping(value = "/feign-consumer3", method = RequestMethod.GET)
+    public String helloConsumer3() {
+        StringBuffer sb = new StringBuffer();
+        sb.append(refactorHelloService.hello("Grace")).append("\n");
+        sb.append(refactorHelloService.hello("Austin", 12)).append("\n");
+        sb.append(refactorHelloService.hello(new com.myyhhuang.helloserviceapi.User("Amber", 8))).append("\n");
+
+        return sb.toString();
+    }*/
 }
