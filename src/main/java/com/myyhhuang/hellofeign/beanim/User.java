@@ -1,4 +1,4 @@
-package com.myyhhuang.hellofeign;
+package com.myyhhuang.hellofeign.beanim;
 
 public class User {
     private String name;

@@ -1,4 +1,4 @@
-package com.myyhhuang.hellofeign;
+package com.myyhhuang.hellofeign.beanim;
 
 import com.myyhhuang.hellofeign.beanim.IMCounty;
 import java.util.LinkedList;
